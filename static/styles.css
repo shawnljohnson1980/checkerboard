@@ -1,0 +1,34 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.box0 {
+  height: 80px;
+  width: 80px;
+  background-color: dodgerblue;
+  display: inline-block;
+  margin: 0px;
+}
+.box1 {
+  height: 80px;
+  width: 80px;
+  background-color: goldenrod;
+  display: inline-block;
+  margin: 0px;
+}
+body {
+  display: flexbox;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.navbar {
+  text-align: center;
+}
+.row {
+  height: 80px;
+  margin: 0px;
+  padding: 0px;
+}

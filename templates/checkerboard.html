@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" type=" text/css" href="{{  url_for ( 'static', filename = 'bootstrap.min.css') }}">
+    <link rel="stylesheet" type=" text/css" href="{{  url_for ( 'static', filename = 'styles.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md shadow">
+        <div class="container"><a class="navbar-brand text-info" style="font-size: 30px;">My Checkerboard</a><button
+                data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">
+                </span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active">
+                    <li class="nav-item"><a class="nav-link"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                {% for line in board %}
+                <div class="row">
+                    {% for cell in line %}
+                    {% if cell == 0 %}
+                    <div class="box0" style="({ new_color1 })"></div>
+                    {% else %}
+                    <div class=" box1" style="({ new_color2})"></div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for ( 'static', filename=  'jquery.min.js'  ) }}"></script>
+    <script type="text/javascript" src="{{ url_for ( 'static', filename='bootstrap.min.js' ) }}"></script>
+</body>
+
+</html>
